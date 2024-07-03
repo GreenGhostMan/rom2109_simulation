@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Adding ROM2109 ROBOTS to .gazebo/model
+if [[ -e ~/.gazebo/models ]]
+then
+	echo "models Directory exists."
+	rm -rf ~/.gazebo/models/rom2109*
+	rm -rf ~/.gazebo/models/rom_maze*
+else
+	mkdir -p ~/.gazebo/models
+fi
+cp -r ./models/* ~/.gazebo/models
+echo "models Copy finished!"
+
+# Modifying urdf.urdf
+#echo "convert xacro file from rom_description/urdf/robotxx.xacro to urdf"
+
+echo "#export ROM_GZ_WORLD=rom_maze_1.world" >> ~/.bashrc
+echo "export ROM_GZ_WORLD=rom_maze_4.world" >> ~/.bashrc
+echo "#export ROM_GZ_WORLD=balls.world" >> ~/.bashrc
+echo "#export ROM_GZ_WORLD=single_square.world" >> ~/.bashrc
+echo "#export ROM_GZ_WORLD=f1_race.world" >> ~/.bashrc
+
+echo "#ROM_ROBOT_MODEL=yoyo" >> ~/.bashrc
+echo "#ROM_ROBOT_MODEL=rom2109" >> ~/.bashrc
+
+echo "Installing tmux, tmuxinator"
+sudo apt install tmux tmuxinator -y
+
+
+cp ./.tmuxinator.yml ./autostart.sh ./.tmux.conf $HOME/
+echo "Copying .tmux.conf , .tmuxinator.yaml, autostart.sh to $HOME "
+
