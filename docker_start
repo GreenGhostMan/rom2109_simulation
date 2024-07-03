@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+xhost +local:root
+docker run -it --network='host' \
+--env='DISPLAY' \
+--env='QT_X11_NO_MITSHM=1' \
+--env='XDG_RUNTIME_DIR=/run/user/${UID}' \
+--volume='/tmp/.X11-unix:/tmp/.X11-unix:rw' \
+--volume='/home/mr_robot/Desktop/docker_mounted/rom2109_simulation:/catkin_ws/src/rom2109_simulation' \
+--name ros1_container \
+romrobotics/noetic_desktop:rom2109 bash
+docker rm ros1_container

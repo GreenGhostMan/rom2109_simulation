@@ -1,18 +1,18 @@
 <launch>
-    <arg name="model" value="bot"/> <!-- bot, tall, short -->
+    <arg name="model" default="$(env ROM_ROBOT_MODEL)" doc="model type [yoyo, rom2109_tall_gazebo, rom2109_bot_gazebo, rom2109_short_gazebo]" />
 
     <arg name="rviz" value="false"/>
 
     <!-- Convert xacro model file and put on parameter server -->
-    <param name="robot_description" textfile="$(find rom2109_description)/urdf/rom2109_$(arg model)_gazebo.urdf" />
+    <param name="robot_description" textfile="$(find rom2109_description)/urdf/$(arg model).urdf" />
 
     <!-- Spawn the robot from parameter server into Gazebo -->
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model rom2109_bot" />
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model rom2109" />
 
     <!-- start a robot_state_publisher -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-    
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
     <include file="$(find gazebo_ros)/launch/empty_world.launch" />
 
     <group if="$(eval rviz == true)">

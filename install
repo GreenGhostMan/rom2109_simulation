@@ -20,9 +20,11 @@ echo "export ROM_GZ_WORLD=rom_maze_4.world" >> ~/.bashrc
 echo "#export ROM_GZ_WORLD=balls.world" >> ~/.bashrc
 echo "#export ROM_GZ_WORLD=single_square.world" >> ~/.bashrc
 echo "#export ROM_GZ_WORLD=f1_race.world" >> ~/.bashrc
-
-echo "#ROM_ROBOT_MODEL=yoyo" >> ~/.bashrc
-echo "#ROM_ROBOT_MODEL=rom2109" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "#export ROM_ROBOT_MODEL=yoyo" >> ~/.bashrc
+echo "export ROM_ROBOT_MODEL=rom2109_tall_gazebo" >> ~/.bashrc
+echo "#export ROM_ROBOT_MODEL=rom2109_short_gazebo" >> ~/.bashrc
+echo "#export ROM_ROBOT_MODEL=rom2109_bot_gazebo" >> ~/.bashrc
 
 echo "Installing tmux, tmuxinator"
 sudo apt install tmux tmuxinator -y

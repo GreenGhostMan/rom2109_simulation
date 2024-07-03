@@ -8,7 +8,7 @@ project(rom2109_gazebo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  depthimage_to_laserscan
+  #depthimage_to_laserscan
   gazebo_msgs
   gazebo_ros
   rom2109_description
