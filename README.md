@@ -33,3 +33,7 @@ $ catkin_make\
 
 Noetic မှာ roslaunch rom2109_gazebo gazebo_simulation_world.launch ကို run လို့ error ပေါ်ခဲ့ရင် \
 gazebo.launch ကို run ပြီး simulation world ကို စိတ်ကြိုက်တည်ဆောက်ပြီး save world လုပ်ပါ။
+
+```
+rom2109_tall_gazebo.urdf ကို ပြင်ဆင်ပြီးဖြစ်သည်။ ကျန်တဲ့ urdf များကို သုံးမယ်ဆို ပြင်ဆင်ပါ။
+```

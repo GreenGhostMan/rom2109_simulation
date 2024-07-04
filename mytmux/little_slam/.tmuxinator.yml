@@ -9,20 +9,18 @@ startup_window: Gazebo
 # startup_pane: 0
 
 windows:
-  - ROSCORE:
-      root: roscore
   - Gazebo: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; sleep 5; roslaunch rom2109_gazebo gazebo_simulation.launch
+        - clear; source ~/.bashrc; roslaunch rom2109_gazebo gazebo_simulation.launch
   - Gmapping: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; sleep 10; roslaunch rom2109_slam gmapping_demo.launch
+        - clear; source ~/.bashrc; roslaunch rom2109_slam gmapping_demo.launch
   - Rviz: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; #sleep 10; roslaunch rom2109_slam rviz.launch
+        - clear; source ~/.bashrc; roslaunch rom2109_slam rviz.launch
   - LittleSLAM: 
       root: ~/
       panes:
@@ -30,8 +28,8 @@ windows:
   - Twist: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; sleep 10; rosrun teleop_twist_keyboard teleop_twist_keyboard.py _speed:=0.5 _turn:=0.5
-  - AMCL: 
+        - clear; source ~/.bashrc; roslaunch rom2109_slam keyboard_teleop.launch
+  - CLI: 
       root: ~/
       panes:
-        - source ~/.bashrc; clear; sleep 10; roslaunch rom2109_slam amcl_demo.launch
+        - source ~/.bashrc; clear; 
