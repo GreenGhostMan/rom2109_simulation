@@ -6,7 +6,7 @@
     <arg name="z_pos" default="0.0"/>
     
     <arg name="world_name" default="$(env ROM_GZ_WORLD)" doc="check world name in .bashrc" />
-    <arg name="open_rviz" value="true"/>
+    <arg name="open_rviz" value="false"/>
     
     <!-- Convert xacro model file and put on parameter server -->
     <param name="robot_description" textfile="$(find rom2109_description)/urdf/$(arg model).urdf" />

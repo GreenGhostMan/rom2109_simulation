@@ -12,15 +12,15 @@ windows:
   - Gazebo: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; roslaunch rom2109_gazebo gazebo_simulation.launch
+        - clear; source ~/.bashrc; sleep 5;roslaunch rom2109_gazebo gazebo_simulation.launch
   - Gmapping: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; roslaunch rom2109_slam gmapping_demo.launch
+        - clear; source ~/.bashrc; #roslaunch rom2109_slam gmapping_demo.launch
   - Rviz: 
       root: ~/
       panes:
-        - clear; source ~/.bashrc; roslaunch rom2109_slam rviz.launch
+        - clear; source ~/.bashrc; #roslaunch rom2109_slam slam_with_ekf.launch
   - LittleSLAM: 
       root: ~/
       panes:
