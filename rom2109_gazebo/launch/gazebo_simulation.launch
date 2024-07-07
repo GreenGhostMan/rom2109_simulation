@@ -1,6 +1,6 @@
 <launch>
     <!-- choose robot -->
-    <arg name="model" default="$(env ROM_ROBOT_MODEL)" doc="model type [yoyo, rom2109_tall_gazebo, rom2109_bot_gazebo, rom2109_short_gazebo]" /> <!-- bot, tall, short -->
+    <arg name="model" default="$(env ROM_ROBOT_MODEL)" doc="model type [rom2109_tall_gazebo, rom2109_bot_gazebo, rom2109_short_gazebo]" /> <!-- bot, tall, short -->
     <arg name="x_pos" default="-2.0"/>
     <arg name="y_pos" default="-0.5"/>
     <arg name="z_pos" default="0.0"/>

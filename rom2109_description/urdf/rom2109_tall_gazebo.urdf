@@ -477,7 +477,7 @@
 
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-      <alwaysOn>true</alwaysOn>
+      <alwaysOn>true</alwaysOn>check_everyparams
 	    <updateRate>10.0</updateRate> 
 		  <robotBaseFrame>base_link</robotBaseFrame>
 		  <publishWheelTF>true</publishWheelTF>
