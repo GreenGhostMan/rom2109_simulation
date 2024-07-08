@@ -7,19 +7,19 @@
         <updateRate>20</updateRate>
 
         <!-- Name of left joint, defaults to `left_joint` -->
-        <leftJoint>wheel_left_joint</leftJoint>
+        <leftJoint>left_wheel_joint</leftJoint>
 
         <!-- Name of right joint, defaults to `right_joint` -->
-        <rightJoint>wheel_right_joint</rightJoint>
+        <rightJoint>right_wheel_joint</rightJoint>
 
         <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
-        <wheelSeparation>0.5380</wheelSeparation>=============
+        <wheelSeparation>0.208</wheelSeparation>
 
         <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
-        <wheelDiameter>0.2410</wheelDiameter>=====================
+        <wheelDiameter>0.0664</wheelDiameter>
 
         <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
-        <wheelAcceleration>1.0</wheelAcceleration>=====================
+        <wheelAcceleration>1.0</wheelAcceleration>
 
         <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
         <wheelTorque>20</wheelTorque>========================
@@ -28,7 +28,7 @@
         <commandTopic>cmd_vel</commandTopic>=====================
 
         <!-- Topic to publish nav_msgs/Odometry messages, defaults to `odom` -->
-        <odometryTopic>odom</odometryTopic>===================
+        <odometryTopic>odom</odometryTopic>
 
         <!-- Odometry frame, defaults to `odom` -->
         <odometryFrame>odom</odometryFrame>
